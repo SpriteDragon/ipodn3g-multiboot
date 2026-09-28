@@ -6,7 +6,7 @@ A bootloader for the iPod 2g, flashed with `mks5lboot.exe`.
 
 Run:
 ```bash
-git clone [https://github.com/SpriteDragon7/ipodn3g-multiboot.git](https://github.com/SpriteDragon7/ipodn3g-multiboot.git) nano3_bootloader
+git clone [https://github.com/SpriteDragon/ipodn3g-multiboot.git](https://github.com/SpriteDragon/ipodn3g-multiboot.git) nano3_bootloader
 
 ```
 

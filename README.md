@@ -24,6 +24,11 @@ bash scripts/build_wsl.sh
 
 ```
 
-```
+You will have to use the project [here(https://github.com/giek2000/Nano3Rockbox)] to install rockbox onto the device
+
+In regular cmd (admin), run this, make sure the compiled .ipod file is in out/ folder and the `mks5lboot.exe` is in the same root folder:
+
+```cmd
+mks5lboot.exe --bl-inst out/bootloader-ipodnano3g.ipod
 
 ```

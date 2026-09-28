@@ -28,7 +28,7 @@ You will have to use the project [here](https://github.com/giek2000/Nano3Rockbox
 
 ## Then In regular cmd (admin)
 
-run this, make sure the compiled .ipod file is in out/ folder and the `mks5lboot.exe` is in the same root folder:
+run this, make sure the compiled `bootloader-ipodnano3g.ipod` file is in out/ folder and the `mks5lboot.exe` is in the same root folder:
 
 ```cmd
 mks5lboot.exe --bl-inst out/bootloader-ipodnano3g.ipod

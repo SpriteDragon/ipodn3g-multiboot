@@ -2,7 +2,7 @@
 
 <img src="https://hostrepo.tailmuncher.org/n3g/preview.jpg" alt="ipodn3g-multiboot preview" width="300" />
 
-A bootloader for the iPod 2g, flashed with `mks5lboot.exe`.
+A bootloader for the iPod 2g, flashed with `mks5lboot.exe`. (will not work with Slackwares loader... *yet*)
 
 ## To build inside WSL:
 
@@ -42,3 +42,4 @@ mks5lboot.exe --bl-inst out/bootloader-ipodnano3g.ipod
 When in USB mode, if it says the drive must be formatted, do it.
 
 Download the n3g rockbox firmware [here](https://hostrepo.tailmuncher.org/n3g/.rockbox.zip) to put it on the device
+This is a personal take, but DO NOT download using Gieks n3g app. It is highly unstable and erases the entire iPod, as well as formats the Nand.

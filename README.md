@@ -1,6 +1,6 @@
 # ipodn3g-multiboot
 
-<img src="https://hostrepo.tailmuncher.org/n3g/preview.jpg" alt="ipodn3g-multiboot preview" width="400" />
+<img src="https://hostrepo.tailmuncher.org/n3g/preview.jpg" alt="ipodn3g-multiboot preview" width="200" />
 
 A bootloader for the iPod 2g, flashed with `mks5lboot.exe`.
 

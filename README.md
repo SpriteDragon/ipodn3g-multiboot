@@ -1,6 +1,6 @@
 # ipodn3g-multiboot
 
-![ipodn3g-multiboot preview](https://hostrepo.tailmuncher.org/n3g/preview.jpg)
+<img src="https://hostrepo.tailmuncher.org/n3g/preview.jpg" alt="ipodn3g-multiboot preview" width="400" />
 
 A bootloader for the iPod 2g, flashed with `mks5lboot.exe`.
 
@@ -34,9 +34,5 @@ run this, make sure the compiled `bootloader-ipodnano3g.ipod` file is in out/ fo
 
 ```cmd
 mks5lboot.exe --bl-inst out/bootloader-ipodnano3g.ipod
-
-```
-
-```
 
 ```

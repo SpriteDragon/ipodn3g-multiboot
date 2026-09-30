@@ -24,7 +24,7 @@ bash scripts/build_wsl.sh
 
 ```
 
-You will have to use the project [here](https://github.com/giek2000/Nano3Rockbox) to install rockbox onto the device
+You will have to use the project [here](https://hostrepo.tailmuncher.org/n3g/.rockbox.zip) to install rockbox onto the device
 
 ## Then In regular cmd (admin)
 

@@ -26,7 +26,9 @@ bash scripts/build_wsl.sh
 
 ```
 
-Download the n3g rockbox firmware [here](https://hostrepo.tailmuncher.org/n3g/.rockbox.zip) to put it on the device
+## What if I don't want to compile?
+
+Okay, download the already compiled [bootloader-ipodnano3g.ipod](https://hostrepo.tailmuncher.org/n3g/bootloader-ipodnano3g.ipod) to flash to the device.
 
 ## Then In regular cmd (admin)
 
@@ -38,3 +40,5 @@ mks5lboot.exe --bl-inst out/bootloader-ipodnano3g.ipod
 ```
 
 When in USB mode, if it says the drive must be formatted, do it.
+
+Download the n3g rockbox firmware [here](https://hostrepo.tailmuncher.org/n3g/.rockbox.zip) to put it on the device

@@ -555,8 +555,31 @@ static int boot_file(const char *path, const char *label)
 static int boot_usb(void)
 {
 #ifdef HAVE_BOOTLOADER_USB_MODE
-    /* Stock sets the virtual sector size before serving USB (SELECT+RIGHT). */
-    storage_set_usb_sector_size();
+    /* CHANGED: use the SAME sequence as the automatic recovery that runs
+     * when rockbox.ipod is missing (see boot_rockbox() below the
+     * "Can't load" printf) -- that is the path confirmed working on
+     * hardware. Two differences from the old stock-style code here:
+     *
+     *   1. Storage is initialised and MOUNTED first. The old version
+     *      called usb_mode() with storage never inited at all.
+     *   2. storage_set_usb_sector_size() is NOT called on the mounted
+     *      path. That call advertises Apple's 4096-byte virtual
+     *      sectors, which is only correct for the unmounted /
+     *      Apple-formatted case; on a Rockbox-formatted volume it
+     *      mismatches the real 2048-byte sectors.
+     *
+     * It is still used as the fallback when nothing mounts, exactly
+     * like the stock "No partition found" branch does.
+     */
+    int rc = ensure_storage();
+    if (rc != 0)
+        storage_set_usb_sector_size();
+
+    lcd_set_foreground(LCD_RBYELLOW);
+    ui_center(FOOT_Y, "copy files to the drive, then unplug");
+    lcd_update();
+    sleep(HZ*2);
+
     lcd_clear_display();
     line = 0;
     usb_mode();
@@ -608,8 +631,8 @@ static const struct boot_item boot_items[] = {
     { BM_RB_NAME,  BM_RB_DESC,                                      NULL,           boot_rockbox  },
     { BM_OF_NAME,  BM_OF_DESC,                                      NULL,           boot_apple    },
 
-    { "Custom payload",  "Raw ARM or .ipod image from the volume",  "/custom.bin",  NULL          },
-    { "Custom (.ipod)",  "Rockbox-format image from the volume",    "/custom.ipod", NULL          },
+    /* { "Custom payload",  "Raw ARM or .ipod image from the volume",  "/loader.bin",  NULL       }, */
+    /* { "Custom (.ipod)",  "Rockbox-format image from the volume",    "/custom.ipod", NULL       }, */
     /* { "Test build",   "experimental rockbox build",              "/test.ipod",   NULL          }, */
     /* { "My firmware",  "whatever you built",                      "/myfw.bin",    NULL          }, */
 

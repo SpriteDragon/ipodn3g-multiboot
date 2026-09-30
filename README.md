@@ -26,7 +26,7 @@ bash scripts/build_wsl.sh
 
 ```
 
-You will have to use the project [here](https://hostrepo.tailmuncher.org/n3g/.rockbox.zip) to install rockbox onto the device
+Download the n3g rockbox firmware [here](https://hostrepo.tailmuncher.org/n3g/.rockbox.zip) to put it on the device
 
 ## Then In regular cmd (admin)
 
@@ -36,3 +36,5 @@ run this, make sure the compiled `bootloader-ipodnano3g.ipod` file is in out/ fo
 mks5lboot.exe --bl-inst out/bootloader-ipodnano3g.ipod
 
 ```
+
+When in USB mode, if it says the drive must be formatted, do it.

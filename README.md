@@ -2,7 +2,7 @@
 
 <img src="https://hostrepo.tailmuncher.org/n3g/preview.jpg" alt="ipodn3g-multiboot preview" width="300" />
 
-A bootloader for the iPod 2g, flashed with `mks5lboot.exe`. (will not work with Slackwares loader... *yet*)
+A bootloader for the iPod 3g, flashed with `mks5lboot.exe`. (will not work with Slackwares loader... *yet*)
 
 ## To build inside WSL:
 
